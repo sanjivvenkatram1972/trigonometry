@@ -1,0 +1,4 @@
+PWA Packaging Kit
+Copyright (c) 2026. All rights reserved.
+
+This kit is provided as an open-source template for packaging Progressive Web Applications.

@@ -1,0 +1,20 @@
+# PWA Deployment & Testing Instructions
+
+## Local Development & Testing
+1. Progressive Web Applications (PWAs) require a secure origin (HTTPS) or `localhost` to work.
+2. Serve this directory using a local HTTP server:
+   - Python 3: `python -m http.server 8000`
+   - Node.js: `npx serve`
+3. Open your browser and go to `http://localhost:8000`.
+
+## Verifying the PWA
+1. Open Google Chrome or Microsoft Edge DevTools (F12).
+2. Go to the **Application** tab.
+3. Check the **Manifest** section to see if your `manifest.webmanifest` is loaded correctly.
+4. Check the **Service Workers** section to verify that `sw.js` is active and running.
+5. Use Chrome **Lighthouse** to run a PWA audit.
+
+## Production Deployment
+1. Ensure your production server serves all files over **HTTPS**.
+2. Make sure the MIME type for `manifest.webmanifest` is set to `application/manifest+json`.
+3. Set appropriate caching headers: do not cache `sw.js` so updates can be rolled out instantly.

@@ -1,0 +1,15 @@
+<!-- Add this to your HTML <head> -->
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+
+<!-- Add this script before the closing </body> tag -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log('Service Worker registered successfully.', reg))
+        .catch((err) => console.error('Service Worker registration failed.', err));
+    });
+  }
+</script>
